@@ -1,0 +1,14 @@
+version: '3'
+services:
+  dash-front:
+    container_name: dash-front
+    image: dash-front:latest
+    restart: always
+    ports:
+      - 80:80
+    networks:
+      - dash
+
+networks:
+  dash:
+    external: true
